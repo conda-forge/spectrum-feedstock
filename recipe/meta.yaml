@@ -1,6 +1,6 @@
-{% set version = "0.6.5" %}
+{% set version = "0.6.8" %}
 {% set name = "spectrum" %}
-{% set sha256 = "ef5b8defd56c9f0fdf89e7a79fdefd921b5c054de42572b63ac8cd61e4db651b" %}
+{% set sha256 = "3b559a19dd37ff91dd2d2c76310c53259b25b30f3fa6a9d023ab0fde555691c1" %}
 
 package:
   name: {{ name }}
@@ -24,10 +24,9 @@ requirements:
 
   run:
     - python
-    - matplotlib
     - numpy
     - scipy
-    - easydev
+    #- matplotlib # not required anymore strictly speaking
 
 test:
   imports:
