@@ -1,6 +1,6 @@
-{% set version = "0.7.1" %}
+{% set version = "0.7.3" %}
 {% set name = "spectrum" %}
-{% set sha256 = "19accd3a870c54098ab98d20963c34319c402207d1b515aed7f46cce648baa50" %}
+{% set sha256 = "212bc7d01d94bde1cbced5dfc458e1a630e60ed8bde0626641ec48b1c2e154e9" %}
 
 package:
   name: {{ name }}
