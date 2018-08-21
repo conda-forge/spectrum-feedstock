@@ -1,6 +1,6 @@
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 {% set name = "spectrum" %}
-{% set sha256 = "212bc7d01d94bde1cbced5dfc458e1a630e60ed8bde0626641ec48b1c2e154e9" %}
+{% set sha256 = "a15d733c9e82a6572d0515ba49bc276119a215fe71c63538c38f121ff6c5b3d6" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 
