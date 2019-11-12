@@ -1,19 +1,16 @@
 {% set version = "0.7.5" %}
-{% set name = "spectrum" %}
-{% set sha256 = "ae88d51d9b7b9d0a9b0bd8aaef95265cce0c9b21bee1c847a769e60fa0ede870" %}
 
 package:
-  name: {{ name }}
+  name: spectrum
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url:  https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url:  https://pypi.io/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
+  sha256: ae88d51d9b7b9d0a9b0bd8aaef95265cce0c9b21bee1c847a769e60fa0ede870
 
 build:
-  number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1001
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 
 requirements:
@@ -21,22 +18,20 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - numpy
     - scipy
-    - matplotlib # not required anymore strictly speaking but let us install it for conda
 
 test:
   imports:
     - spectrum
-    - spectrum.mtm # test the C extension import
+    - spectrum.mtm  # test the C extension import
 
 about:
   home: http://github.com/cokelaer/spectrum
-  license: "BSD 3-clause"
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Spectrum Analysis Tools'
