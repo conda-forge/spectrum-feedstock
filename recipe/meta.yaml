@@ -1,4 +1,4 @@
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: spectrum
@@ -6,10 +6,10 @@ package:
 
 source:
   url:  https://pypi.io/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
-  sha256: ae88d51d9b7b9d0a9b0bd8aaef95265cce0c9b21bee1c847a769e60fa0ede870
+  sha256: 8fd1fe6bef2ec7559fd20b167cdec70cef1292fbed930ca70a60d6114dbb8d9a
 
 build:
-  number: 1001
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 
