@@ -1,16 +1,16 @@
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: spectrum
   version: {{ version }}
 
 source:
-  url:  https://pypi.io/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
-  sha256: ae88d51d9b7b9d0a9b0bd8aaef95265cce0c9b21bee1c847a769e60fa0ede870
+  url: https://pypi.io/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
+  sha256: 8fd1fe6bef2ec7559fd20b167cdec70cef1292fbed930ca70a60d6114dbb8d9a
 
 build:
-  number: 1002
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 
 requirements:
@@ -35,10 +35,10 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Spectrum Analysis Tools'
+  summary: Spectrum Analysis Tools
   doc_url: http://pyspectrum.readtedocs.io/en/master
   dev_url: http://github.com/cokelaer/spectrum
 
 extra:
   recipe-maintainers:
-   - cokelaer
+    - cokelaer
