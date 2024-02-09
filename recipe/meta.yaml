@@ -9,12 +9,13 @@ source:
   sha256: c5c262f0a67d6013b5503749d6e9fdfe5909d10b45c85e391df001ed112fd8ff
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
