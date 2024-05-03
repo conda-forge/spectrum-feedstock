@@ -9,7 +9,7 @@ source:
   sha256: c5c262f0a67d6013b5503749d6e9fdfe5909d10b45c85e391df001ed112fd8ff
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - cokelaer
+    - pauldmccarthy
