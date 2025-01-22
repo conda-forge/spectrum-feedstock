@@ -1,15 +1,15 @@
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: spectrum
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
-  sha256: c5c262f0a67d6013b5503749d6e9fdfe5909d10b45c85e391df001ed112fd8ff
+  url: https://pypi.org/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
+  sha256: 4539347e7cdb9ea4ea63ca76033eed8bf54f283dc4a42e966464734c279809cd
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -17,9 +17,11 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - setuptools
