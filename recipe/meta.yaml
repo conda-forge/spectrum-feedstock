@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/s/spectrum/spectrum-{{ version }}.tar.gz
   sha256: 8203c2a06004bef60d4dc9c92d4f5c252ccf41b1cfe372ef2e61f01fbfb91c0a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
